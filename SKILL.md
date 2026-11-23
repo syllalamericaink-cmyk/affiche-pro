@@ -30,6 +30,8 @@ Avec Chrome ou Edge sans fenêtre (Chromium, tous systèmes) :
   --screenshot=/chemin/affiche.png file:///chemin/src/affiche.html
 ```
 
+- **Chemins absolus obligatoires** pour `--screenshot` et l'URL `file:///` (espaces encodés en %20). Avec un chemin relatif, le navigateur n'écrit rien et ne signale aucune erreur.
+- Un PNG à fond transparent (logo, produit détouré) disparaît sur un fond de même couleur : le poser sur un carré de couleur contrastée, et l'afficher en entier (`background-size:contain`) plutôt que recadré.
 - `--virtual-time-budget` laisse le temps aux polices web de charger. Si une police manque au rendu : 15000, ou embarquer le .ttf en `@font-face` local.
 - Alternative : Playwright / Puppeteer `page.screenshot()`.
 - Impression A4 : 2480×3508 (300 dpi) ou `--force-device-scale-factor=2`.
